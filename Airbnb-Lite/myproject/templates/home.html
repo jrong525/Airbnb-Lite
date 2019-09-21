@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  {% if current_user.is_authenticated %}
+    <p>Hi {{ current_user.username }}!</p>
+  {% else %}
+    <h1>Welcome to Airbnb-Lite</h1>
+    <p>   Please Log in or Register</p>
+  {% endif %}
+</div>
+
+{% endblock %}
